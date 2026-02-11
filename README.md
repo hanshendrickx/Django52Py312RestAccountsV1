@@ -1,2 +1,0 @@
-# Django52Py312RestAccountsV1
-Django52Py312RestAccountsV1
