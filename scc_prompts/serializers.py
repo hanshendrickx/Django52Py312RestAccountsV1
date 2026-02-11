@@ -61,12 +61,9 @@ class PromptTemplateSerializer(serializers.ModelSerializer):
 class GeneratePromptSerializer(serializers.Serializer):
     """
     Serializer for the prompt generation endpoint.
-    Takes a complaint ID and generates appropriate AI prompts.
+    Takes a prompt type to generate appropriate AI prompts.
     """
-    complaint_id = serializers.IntegerField()
     prompt_type = serializers.ChoiceField(
         choices=['triage', 'guidelines', 'combined'],
         default='combined'
     )
-    include_triage_context = serializers.BooleanField(default=True)
-    include_guidelines_context = serializers.BooleanField(default=True)
